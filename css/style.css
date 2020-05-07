@@ -319,6 +319,7 @@ template {
   display: none; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -354,16 +355,38 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding-top: 100px;
   background: #131313 url(../img/hero-bg.jpg) no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__text {
+    font-size: 22px;
+    max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__instagram {
     max-width: 80px;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0; }
+  .hero__scroll-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313; }
 
 .instagram {
   display: flex;
@@ -377,7 +400,12 @@ template {
     transform: rotate(90deg); }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-style: 40px; }
+  .title--primary {
+    color: #E3B873; }
 
 .button {
   padding: 13px 20px;
@@ -386,6 +414,10 @@ template {
   text-transform: uppercase; }
   .button--primary {
     background-color: #E3B873;
+    color: #ffffff; }
+  .button--outline {
+    border: 1px solid #ffffff;
+    background-color: transparent;
     color: #ffffff; }
 
 *, *:before, *:after {
