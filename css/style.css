@@ -469,7 +469,7 @@ body {
     transform: rotate(90deg); }
     .instagram__link::after {
       content: '';
-      width: 2.45rem;
+      width: 3.57rem;
       height: 0.1rem;
       background-color: #E3B873;
       margin-left: 0.9rem; }
@@ -492,20 +492,33 @@ body {
   border-radius: 2px;
   text-transform: uppercase;
   font-size: 1rem; }
-  .button:hover {
-    cursor: pointer; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      box-shadow: none; }
+      background-color: rgba(227, 184, 115, 0.4);
+      box-shadow: none;
+      cursor: pointer;
+      transition: 0.3s; }
+    .button--primary:focus {
+      background-color: #1c478c;
+      outline: none; }
   .button--outline {
     min-width: 14.8rem;
     border: 1px solid #ffffff;
     background-color: transparent;
     color: #ffffff; }
+    .button--outline:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      box-shadow: none;
+      cursor: pointer;
+      transition: 0.3s; }
+    .button--outline:focus {
+      border-color: #1c478c;
+      background-color: #1c478c;
+      outline: none; }
 
 @media screen and (max-width: 1200px) {
   html {
