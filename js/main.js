@@ -34,4 +34,15 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
+  const up = $('.up');
+  $(document).scroll(function () {
+    up.addClass('up--visible');
+  });
+  up.on('mouseleave', function () {
+    up.removeClass('up--visible');
+  });
+  $('.up').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#hero').offset().top }, 1000);
+    e.preventDefault();
+  });
 });

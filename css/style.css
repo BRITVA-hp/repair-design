@@ -680,6 +680,28 @@ sup {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.up {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: #E3B873;
+  border-radius: 50%;
+  min-width: 6rem;
+  min-height: 6rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(19, 19, 19, 0.5); }
+  .up--visible {
+    opacity: 1;
+    visibility: visible; }
+  .up__arrow {
+    max-width: 50%;
+    height: auto; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
