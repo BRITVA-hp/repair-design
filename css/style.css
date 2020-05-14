@@ -598,6 +598,8 @@ sup {
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
+    .modal__input:focus {
+      outline: none; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
