@@ -23,19 +23,28 @@
 //     }
 //   });
 // });
+
+// При загрузке страницы, выполняем различные скрипты.
 $(document).ready(function () {
+
+  // Получаем разные объекты со страницы.
   const modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
-        closeBtn = $('.modal__close');
+        closeBtn = $('.modal__close'),
+        up = $('.up'),
+        hero = $('.hero').height()/2;
 
+  // При клике на любую кнопку появляется модальное окно.
   modalBtn.on('click', function (){
     modal.toggleClass('modal--visible');
   });
+
+  // При клике по крестику, закрывается модальное окно.
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
-  const up = $('.up');
-  const hero = $('.hero').height()/2;
+
+  // При прокрутке документа, появляется кнопка "наверх" и исчезает, когда документ прокручен до верха. 
   $(document).scroll(function (){
     let scroll = $(window).scrollTop();
   if (scroll > hero) {
@@ -46,9 +55,23 @@ $(document).ready(function () {
   }
   });
 
+  // Функция для плавного скролла, при нажатии на кнопку "наверх".
   $('.up').on('click', function(e){
     $('html,body').stop().animate({ scrollTop: $('#hero').offset().top }, 1000);
     e.preventDefault();
+  });
+
+  // Закрытие модального окна, при клике за его пределами.
+  modal.on('click', (event) => {
+    if (modal.is(event.target)) {
+      modal.removeClass('modal--visible');
+    };
+  });
+
+  $(document).on('keydown', (e) => {
+    if (e.key === "Escape" || e.keyCode === 27 ||e.code === "Escape") {
+      modal.removeClass('modal--visible');
+    };
   });
   
 });
