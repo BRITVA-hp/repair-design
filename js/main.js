@@ -35,14 +35,20 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
   const up = $('.up');
-  $(document).scroll(function () {
+  const hero = $('.hero').height()/2;
+  $(document).scroll(function (){
+    let scroll = $(window).scrollTop();
+  if (scroll > hero) {
     up.addClass('up--visible');
-  });
-  up.on('mouseleave', function () {
+  }
+  if (scroll == 0) {
     up.removeClass('up--visible');
+  }
   });
+
   $('.up').on('click', function(e){
     $('html,body').stop().animate({ scrollTop: $('#hero').offset().top }, 1000);
     e.preventDefault();
   });
+  
 });
