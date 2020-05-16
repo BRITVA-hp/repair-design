@@ -1,22 +1,37 @@
 .swiper
+  &-container
+    &--right
+      margin-left: -1.1rem
+      margin-top: 1.8rem
   &-slide
     display: flex
     flex-wrap: wrap
+    &__img
+      min-width: 48rem
     &__text
       flex-basis: 50%
-      margin-bottom: 2.42rem
+      margin-bottom: 0.2rem
       padding-bottom: 2rem
+      &--bottom
+        margin-bottom: 5.2rem
+      &--right
+        margin-left: -6.8rem
     &__heading
       font-family: 'Yeseva One', cursive
       text-transform: uppercase
       font-size: 1.285rem
-      line-height: 1.78rem
+      line-height: 1.79rem
       color: $primary
-      margin-bottom: 0.64rem
+      margin-top: 0.7rem
+      margin-bottom: 0.58rem
     &__value
+      letter-spacing: -0.01em
+      font-size: 1.1rem
       font-family: 'Futura Book'
   &-pagination
     &-bullet
+      width: 0.7rem
+      height: 0.7rem
       background-color: rgba($light, 0.3)
       &-active
         background-color: $light
@@ -37,3 +52,5 @@
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
   bottom: 0
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 0.65rem

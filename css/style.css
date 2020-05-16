@@ -360,7 +360,9 @@ sup {
     .section-title--left {
       text-align: left; }
     .section-title__heading {
-      line-height: 138.6%;
+      letter-spacing: -0.03em;
+      font-size: 1.82rem;
+      line-height: 2.7rem;
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive; }
       .section-title__heading--primary {
@@ -370,11 +372,12 @@ sup {
       align-items: center; }
       .section-title__word::after {
         content: '';
-        width: 6.57rem;
+        width: 6.65rem;
         height: 2px;
         background-color: #E3B873;
-        margin-left: 2rem; }
+        margin-left: 2.4rem; }
     .section-title__text {
+      margin-bottom: 2.5rem;
       font-size: 1.28rem;
       line-height: 2.07rem;
       max-width: 31.57rem; }
@@ -646,24 +649,39 @@ sup {
   .modal__button {
     align-self: flex-end; }
 
+.swiper-container--right {
+  margin-left: -1.1rem;
+  margin-top: 1.8rem; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
+  .swiper-slide__img {
+    min-width: 48rem; }
   .swiper-slide__text {
     flex-basis: 50%;
-    margin-bottom: 2.42rem;
+    margin-bottom: 0.2rem;
     padding-bottom: 2rem; }
+    .swiper-slide__text--bottom {
+      margin-bottom: 5.2rem; }
+    .swiper-slide__text--right {
+      margin-left: -6.8rem; }
   .swiper-slide__heading {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-size: 1.285rem;
-    line-height: 1.78rem;
+    line-height: 1.79rem;
     color: #E3B873;
-    margin-bottom: 0.64rem; }
+    margin-top: 0.7rem;
+    margin-bottom: 0.58rem; }
   .swiper-slide__value {
+    letter-spacing: -0.01em;
+    font-size: 1.1rem;
     font-family: 'Futura Book'; }
 
 .swiper-pagination-bullet {
+  width: 0.7rem;
+  height: 0.7rem;
   background-color: rgba(255, 255, 255, 0.3); }
   .swiper-pagination-bullet-active {
     background-color: #ffffff; }
@@ -687,6 +705,9 @@ sup {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 0.65rem; }
 
 .button {
   padding: 0.8rem 1.4rem;
@@ -801,6 +822,14 @@ sup {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
+  .swiper-container--right {
+    margin: 0; }
+  .swiper-slide__img {
+    min-width: 0;
+    max-width: 100%;
+    height: auto; }
+  .swiper-slide__text--right {
+    margin-left: 0; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -810,6 +839,8 @@ sup {
 
 @media screen and (max-width: 925px) {
   .col-50 {
+    width: 90%;
+    padding: 2rem;
     margin-bottom: 2rem; }
   .row {
     flex-direction: column;
@@ -838,6 +869,10 @@ sup {
     font-size: 14px; } }
 
 @media screen and (max-width: 570px) {
+  .section-title__text {
+    max-width: 27rem; }
+  .col-50 {
+    width: 90%; }
   .logo {
     margin-left: 3rem; }
   .title {
@@ -861,6 +896,11 @@ sup {
     text-decoration: none; }
   .contacts__button {
     display: none; } }
+
+@media screen and (max-width: 300px) {
+  .hero__button {
+    min-width: 100%;
+    max-width: 100%; } }
 
 @media screen and (max-height: 530px) {
   .hero::after {

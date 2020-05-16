@@ -5,6 +5,18 @@
     &__item
       margin-right: 1rem
 @media screen and ( max-width: 992px  )
+  .swiper
+    &-container
+      &--right
+        margin: 0
+    &-slide
+      &__img
+        min-width: 0
+        max-width: 100%
+        height: auto
+      &__text
+        &--right
+          margin-left: 0
   .nav
     display: none
   .hero
@@ -14,6 +26,8 @@
       margin-left: 0
 @media screen and ( max-width: 925px  )
   .col-50
+    width: 90%
+    padding: 2rem
     margin-bottom: 2rem
   .row
     flex-direction: column
@@ -46,6 +60,12 @@
       &__text
         font-size: 14px
 @media screen and ( max-width: 570px  )
+  .section
+    &-title
+      &__text
+        max-width: 27rem
+  .col-50
+    width: 90%
   .logo
     margin-left: 3rem
   .title
@@ -71,6 +91,11 @@
       text-decoration: none
     &__button
       display: none
+@media screen and ( max-width: 300px  )
+  .hero
+    &__button
+      min-width: 100%
+      max-width: 100%
 @media screen and ( max-height: 530px  )
   .hero
     &::after

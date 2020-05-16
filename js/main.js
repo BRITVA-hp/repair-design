@@ -93,6 +93,6 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + bullets.width() + 10 + 10)
-  bullets.css('left', prev.width() + 10)
+  next.css('left', prev.width() + bullets.width() + 20 + 20)
+  bullets.css('left', prev.width() + 20)
 });
