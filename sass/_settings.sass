@@ -12,10 +12,32 @@ sup
   font-size: 0.6rem
 .section
   padding: 60px
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     text-align: center
-    text-transform: uppercase
-    font-family: 'Yeseva One', cursive
+    &--left
+      text-align: left
+    &__heading
+      line-height: 138.6%
+      text-transform: uppercase
+      font-family: 'Yeseva One', cursive
+      &--primary
+        color: $primary
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 6.57rem
+        height: 2px
+        background-color: $primary
+        margin-left: 2rem
+    &__text
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
     &__image
       display: flex
       justify-content: center

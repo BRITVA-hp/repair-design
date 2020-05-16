@@ -11,7 +11,7 @@
 //   });
 
 //   closeBtn.addEventListener('click', switchModal);
-//   document.addEventListener('keypress', (event) => {
+//   document.addEventListener('keydown', (event) => {
 //         if (event.keyCode === 27) {
 //           modal.classList.remove('modal--visible');
 //         }
@@ -68,10 +68,31 @@ $(document).ready(function () {
     };
   });
 
+  // Закрытие модального окна, при нажатии на кнопку esc.
   $(document).on('keydown', (e) => {
     if (e.key === "Escape" || e.keyCode === 27 ||e.code === "Escape") {
       modal.removeClass('modal--visible');
     };
   });
-  
+
+  // Слайдер
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Позиционирование кнопок и точек
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + bullets.width() + 10 + 10)
+  bullets.css('left', prev.width() + 10)
 });
