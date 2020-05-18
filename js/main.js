@@ -93,6 +93,58 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + bullets.width() + 20 + 20)
-  bullets.css('left', prev.width() + 20)
+  next.css('left', prev.width() + bullets.width() + 20 + 20);
+  bullets.css('left', prev.width() + 20);
+
+  // Слайдер с цифрами
+  // var swiper = new Swiper('.swiper-container1', {
+  //   pagination: {
+  //     el: '.swiper-pagination1',
+  //     type: 'fraction',
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next1',
+  //     prevEl: '.swiper-button-prev1',
+  //   },
+  // });
+
+  // var total = +$('.swiper-pagination-total').text();
+  // var current = +$('.swiper-pagination-current').text() - 1;
+  // for (i=0; i<total; i++) {
+  //   $('.swiper-navigation__pagination').append('<div class="swiper-navigation__pagination--bullet">')
+  // };
+
+  // var newArr = Array.from($('.swiper-wrapper1').children());
+
+  // newArr.forEach(function(item, x, arr) {
+  //   if ($(item).hasClass('swiper-slide-active')) {
+  //     var arr = Array.from($('.swiper-navigation__pagination--bullet'));
+  //     arr.forEach(function(itemo, y, arr1) {
+  //       if (x == y) {
+  //         $(itemo).addClass('swiper-navigation__pagination--bullet-active');
+  //       } else {
+  //         $(itemo).removeClass('swiper-navigation__pagination--bullet-active');
+  //       };
+  //     });
+  //   };
+  // });
+
+  // $(document).on('click', function() {
+  //   newArr.forEach(function(item, x, arr) {
+  //     if ($(item).hasClass('swiper-slide-active')) {
+  //       var arr = Array.from($('.swiper-navigation__pagination--bullet'));
+  //       arr.forEach(function(itemo, y, arr1) {
+  //         if (x == y) {
+  //           $(itemo).addClass('swiper-navigation__pagination--bullet-active');
+  //         } else {
+  //           $(itemo).removeClass('swiper-navigation__pagination--bullet-active');
+  //         };
+  //       });
+  //     };
+  //   });
+  // });
+  
+
+  new WOW().init();
+
 });

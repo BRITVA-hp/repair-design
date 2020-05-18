@@ -1,4 +1,19 @@
+.projects
+  padding-bottom: 30rem
 .swiper
+  &-navigation
+    display: flex
+    &__pagination
+      display: flex
+      &--bullet, &--bullet-active
+        content: ''
+        width: 1rem
+        height: 1rem
+        border-radius: 50%
+      &--bullet
+        background-color: rgba($light, 0.3)
+      &--bullet-active
+        background-color: $light
   &-container
     &--right
       margin-left: -1.1rem
@@ -35,8 +50,9 @@
       background-color: rgba($light, 0.3)
       &-active
         background-color: $light
+
   &-button
-    &-prev, &-next
+    &-prev, &-next, &-prev1, &-next1
       bottom: 0
       top: auto
       background-size: 42px
@@ -44,11 +60,14 @@
       height: 14px
       &::after
        display: none 
-    &-prev
+    &-prev, &-prev1
       left: 0
       background: url(../img/arrow-prev.svg) no-repeat center
-    &-next
+    &-next, &-next1
       background: url(../img/arrow-next.svg) no-repeat center
+    &-prev1, &-next1
+      cursor: pointer
+
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
   bottom: 0

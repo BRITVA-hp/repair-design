@@ -19,9 +19,12 @@ sup
     text-align: center
     &--left
       text-align: left
+    &--light
+      color: $light
     &__heading
+      margin-bottom: 0.6rem
       letter-spacing: -0.03em
-      font-size: 1.82rem
+      font-size: 1.5rem
       line-height: 2.7rem
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
@@ -36,6 +39,15 @@ sup
         height: 2px
         background-color: $primary
         margin-left: 2.4rem
+    &__words
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 6.65rem
+        height: 2px
+        background-color: $primary
+        margin-left: 6rem
     &__text
       margin-bottom: 2.5rem
       font-size: 1.28rem
