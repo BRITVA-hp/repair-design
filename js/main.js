@@ -147,4 +147,92 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  // Валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // Строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // Правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },  
+    errorElement: "div",
+    // Сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // Строчное правило
+      controlUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      controlUserPhone: "required",
+    },  
+    errorElement: "div",
+    // Сообщения
+    messages: {
+      controlUserName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      controlUserPhone: "Заполните поле",
+    }
+
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // Строчное правило
+      footerUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      footerUserPhone: "required",
+      // Правило-объект (блок)
+      footerUserQuestion: "required"
+    },  
+    errorElement: "div",
+    // Сообщения
+    messages: {
+      footerUserName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      footerUserPhone: "Заполните поле",
+      footerUserQuestion: "Заполните поле"
+    }
+
+  });
+
+  // Маска для телефона
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
 });

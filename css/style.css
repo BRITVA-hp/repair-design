@@ -608,15 +608,19 @@ sup {
   max-width: 55rem;
   margin: auto; }
 
-.control__input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 30%; }
-  .control__input-group--left {
+.control__input {
+  color: #131313; }
+  .control__input:focus {
+    outline: none; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
+  .control__input--left {
     margin-right: 1rem; }
 
 .control__label {
-  margin-bottom: -7px; }
+  margin-bottom: -3px; }
 
 .control__button {
   padding: 1.2857rem 4.6rem;
@@ -710,6 +714,7 @@ sup {
     max-width: 37.142rem;
     margin: auto; }
   .footer__input {
+    color: #ffffff;
     padding-top: 0.3rem; }
     .footer__input-group {
       display: flex;
@@ -719,6 +724,8 @@ sup {
       .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: 2rem; }
+    .footer__input:focus {
+      outline: none; }
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.6rem; }
@@ -778,9 +785,13 @@ sup {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+    color: #ffffff; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.428rem; }
+      .modal__input-group:last-of-type {
+        margin-bottom: 1rem; }
     .modal__input:focus {
       outline: none; }
   .modal__policy {
@@ -912,7 +923,6 @@ sup {
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
-  color: #ffffff;
   padding: 0.5rem 0; }
   .input--light::-webkit-input-placeholder {
     color: #ffffff; }
@@ -976,6 +986,12 @@ sup {
   .up__arrow {
     max-width: 50%;
     height: auto; }
+
+div.invalid {
+  color: #DD4F43; }
+
+input.invalid {
+  border: 1px solid #DD4F43; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -1128,7 +1144,12 @@ sup {
     color: #ffffff;
     text-decoration: none; }
   .contacts__button {
-    display: none; } }
+    display: none; }
+  .modal {
+    max-width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); } }
 
 @media screen and (max-width: 300px) {
   .hero__button {
