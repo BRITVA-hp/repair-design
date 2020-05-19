@@ -328,7 +328,8 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  flex-basis: 30%;
+  position: relative; }
 
 .col-50 {
   width: 50%; }
@@ -677,17 +678,28 @@ sup {
   color: #ffffff;
   padding: 1.214rem 2.8rem; }
 
-.design {
-  padding-bottom: 30rem; }
-  .design__description {
-    font-family: 'Futura Book';
-    font-size: 1.42rem;
-    line-height: 1.92rem;
-    text-align: center;
-    max-width: 52.9rem;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 2.78rem; }
+.card__name {
+  margin-top: -0.5rem;
+  margin-bottom: 0.2rem;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.28rem;
+  line-height: 1.78rem; }
+
+.card__specialty {
+  margin-top: 0;
+  font-size: 1.28rem;
+  line-height: 1.85rem;
+  color: #959595; }
+
+.design__description {
+  font-family: 'Futura Book';
+  font-size: 1.42rem;
+  line-height: 1.92rem;
+  text-align: center;
+  max-width: 52.9rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2.78rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -879,6 +891,58 @@ sup {
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 0.65rem; }
 
+.team {
+  margin-bottom: 20rem;
+  margin-top: 30rem;
+  text-align: center; }
+  .team__description {
+    font-size: 1.42rem;
+    line-height: 1.92rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.3rem;
+    margin-bottom: 6rem; }
+  .team__text {
+    font-size: 1.42rem;
+    line-height: 2.42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5.7rem;
+    max-width: 40.57rem; }
+    .team__text::before {
+      margin-bottom: 0.6rem;
+      content: '';
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #E3B873;
+      width: 3.92rem;
+      height: 2px; }
+  .team__textt {
+    flex-direction: column;
+    display: flex; }
+  .team__card-text {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.79rem 2.14rem;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    margin-top: -6rem;
+    max-width: 17rem; }
+  .team__pricetag {
+    width: 100%;
+    font-size: 0.92rem; }
+  .team__col-icon {
+    position: relative; }
+    .team__col-icon-img {
+      position: absolute;
+      left: -2rem;
+      top: -3.5rem; }
+  .team__row {
+    max-width: 94%;
+    margin: auto; }
+
 .button {
   padding: 0.8rem 1.4rem;
   border: none;
@@ -1016,6 +1080,23 @@ input.invalid {
     margin-left: 0; } }
 
 @media screen and (max-width: 925px) {
+  .team {
+    margin: 0;
+    background-color: #131313;
+    color: #ffffff; }
+    .team__card {
+      margin-bottom: 10rem; }
+      .team__card--bottom {
+        margin-bottom: 4rem; }
+      .team__card-text {
+        margin-left: auto;
+        margin-right: auto; }
+    .team__text {
+      display: none; }
+    .team__title-heading {
+      margin-top: 0; }
+    .team__col-icon-img {
+      left: -4rem; }
   .footer {
     background: #131313; }
     .footer__wrap {
