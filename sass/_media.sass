@@ -25,6 +25,29 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 925px  )
+  .footer
+    background: $dark
+    &__wrap
+      margin-top: 2rem
+      max-width: 90%
+      background-color: $dark
+  .projects
+    border: $dark solid
+  .control
+    border: $dark solid
+    background-color: $dark
+    &__section-title
+      margin-top: 0
+    &__text
+      color: $light
+    &__label
+      color: rgba(255, 255, 255, 0.5)
+    &__input
+      border-color: $light
+      &::placeholder
+        color: $light
+    &__policy-label
+      color: $light
   .col-50
     width: 90%
     padding: 2rem
@@ -49,10 +72,23 @@
   .section
     padding: 0
     &-title
+      &__heading
+        &--control
+          margin-top: 0
       &__word
         &::after
           display: none 
 @media screen and ( max-width: 700px  )
+  .control
+    &__form
+      max-width: 90%
+    &__video
+      background-size: cover
+      
+      max-width: 90%
+  .video__play
+    max-width: 20%
+    height: auto
   .swiper
     &-slide
       &__heading
@@ -60,8 +96,41 @@
       &__text
         font-size: 14px
 @media screen and ( max-width: 570px  )
+  .footer
+    &__menu
+      display: none
+    &__input
+      &-group
+        flex-basis: 90%
+    &__policy
+      display: flex
+      align-items: flex-start
+      &-label
+        margin-left: -1rem
+    &__button
+      min-width: 100%
+  .control
+    &__policy
+      display: flex
+    &__form
+      max-width: 80%
+      flex-direction: column
+    &__label
+      margin-bottom: 0.01rem
+    &__policy-label
+      align-self: flex-start
+      margin-left: -1rem
+      margin-bottom: 4rem
+      margin-top: -4rem
+    &__input
+      margin-bottom: 4rem
+    &__button
+      margin-bottom: -2rem
+      order: 1
   .section
     &-title
+      &__heading-types
+        margin-top: 6rem
       &__text
         max-width: 27rem
   .col-50
