@@ -25,6 +25,8 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 925px  )
+  .clients
+    display: none
   .team
     margin: 0
     background-color: $dark
@@ -49,6 +51,9 @@
       margin-top: 2rem
       max-width: 90%
       background-color: $dark
+    &__map
+      min-height: 40rem
+      max-width: 90%
   .projects
     border: $dark solid
   .control
@@ -95,8 +100,12 @@
           margin-top: 0
       &__word
         &::after
-          display: none 
+          display: none
 @media screen and ( max-width: 700px  )
+  .footer
+    &__map
+      min-height: 0
+      max-height: 18.2rem
   .control
     &__form
       max-width: 90%
@@ -115,6 +124,9 @@
         font-size: 14px
 @media screen and ( max-width: 570px  )
   .footer
+    &__wrap-map
+      display: flex
+      flex-direction: column
     &__menu
       display: none
     &__input
@@ -127,6 +139,8 @@
         margin-left: -1rem
     &__button
       min-width: 100%
+    &__section-title
+      order: 5
   .control
     &__policy
       display: flex

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href=css/style.css>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<2b8ad6e1-7f6f-471f-b50d-fda01b4065b7>&lang=ru_RU" type="text/javascript">
+  </script>
   <title>Document</title>
 </head>
 <body>
@@ -474,7 +476,7 @@
         <!-- /.section-title -->
         <div class="team__row">
           <div class="row">
-            <div class="col-30">
+            <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
               <img src="img/team/icon.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card">
                 <img src="img/team/photo.png" alt="photo">
@@ -490,7 +492,7 @@
               <!-- /.card team__card -->
             </div>
             <!-- /.col-30 -->
-            <div class="col-30">
+            <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
               <img src="img/team/icon_1.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card">
                 <img src="img/team/photo_1.png" alt="photo">
@@ -506,7 +508,7 @@
               <!-- /.card team__card -->
             </div>
             <!-- /.col-30 -->
-            <div class="col-30">
+            <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.8s">
               <img src="img/team/icon_2.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card team__card--bottom">
                 <img src="img/team/photo_2.png" alt="photo">
@@ -533,10 +535,115 @@
        <!-- /.container -->
     </section>
 
+    <section class="section clients">
+      <div class="container">
+        <div class="section-title clients__section-title wow animate__animated animate__fadeInUp">
+          <h3 class="section-title__heading clients__title-heading">Наши клиенты</h3>
+          <div class="section-title__image clients__section-title__image">
+            <img src="img/client/icon.svg" alt="icon">
+          </div>
+          <p class="clients__description">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+        </div>
+      
+
+      <div class="row clients__row">
+        <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+          <div class="card clients__card">
+            <div class="clients__card-text">
+              <div class="clients__person">
+                <img src="img/client/photo_2.png" alt="photo" class="clients__photo">
+
+                <h2 class="card__name clients__card-name">Савельева Екатерина Львовна</h2>
+              </div>
+              <!-- /.clients__person -->
+              <p class="clients__card-comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+              
+              <!-- /.clients__wrap-wrap -->
+              <!-- /.clients__wrap-pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <div class="clients__wrap-wrap">
+            <div class="clients__wrap-pricetag">
+              <strong class="clients__pricetag clients__pricetag--left">
+                <img src="img/client/logo.svg" alt="logo" class="clients__pricetag-img">
+                40 M <sup>2</sup>
+              </strong>
+              <strong class="clients__pricetag clients__pricetag--right">
+                <img src="img/client/logo_1.svg" alt="logo" class="clients__pricetag-img">
+                48 дней
+              </strong>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-30 -->
+        <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+          <div class="card clients__card">
+            <div class="clients__card-text">
+              <div class="clients__person">
+                <img src="img/client/photo_3.png" alt="photo" class="clients__photo">
+
+                <h2 class="card__name clients__card-name">Большов Михаил Анатольевич</h2>
+              </div>
+              <!-- /.clients__person -->
+              <p class="clients__card-comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое.<br>Я рекомендую этих мастеров.</p>
+              
+              <!-- /.clients__wrap-pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <div class="clients__wrap-wrap">
+            <div class="clients__wrap-pricetag">
+              <strong class="clients__pricetag clients__pricetag--left">
+                <img src="img/client/logo.svg" alt="logo" class="clients__pricetag-img">
+                90 M <sup>2</sup>
+              </strong>
+              <strong class="clients__pricetag clients__pricetag--right clients__pricetag--right-large">
+                <img src="img/client/logo_1.svg" alt="logo" class="clients__pricetag-img">
+                128 дней
+              </strong>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-30 -->
+        <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.8s">
+          <div class="card clients__card">
+            <div class="clients__card-text">
+              <div class="clients__person">
+                <img src="img/client/photo_1.png" alt="photo" class="clients__photo">
+
+                <h2 class="card__name clients__card-name">Хасанов Даниил Муратович</h2>
+              </div>
+              <!-- /.clients__person -->
+              <p class="clients__card-comment">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. </p>
+              
+              <!-- /.clients__wrap-pricetag -->
+            </div>
+            <!-- /.card__text -->
+          </div>
+          <div class="clients__wrap-wrap">
+            <div class="clients__wrap-pricetag">
+              <strong class="clients__pricetag clients__pricetag--left">
+                <img src="img/client/logo.svg" alt="logo" class="clients__pricetag-img">
+                56 M <sup>2</sup>
+              </strong>
+              <strong class="clients__pricetag clients__pricetag--right">
+                <img src="img/client/logo_1.svg" alt="logo" class="clients__pricetag-img">
+                86 дней
+              </strong>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-30 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    </section>
+
   </main>
 
   <footer class="footer section--dark">
-    <div class="container">
+    <div class="container footer__container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="#" class="form footer__form">
@@ -569,7 +676,20 @@
         </form>
       </div>
       <!-- /.footer-wrap -->
-      
+      <div class="footer__wrap-map">
+        <div class="section-title footer__section-title wow animate__animated animate__fadeInUp">
+          <h3 class="section-title__heading footer__title-heading section-title__heading--primary">Ростов на дону, Торговый центр Plaza
+            Прямой телефон +7 (999) 768 32 99</h3>
+          <!-- /.section-title__heading -->
+          <div class="footer__section-title__wrap">
+              <img src="img/footer/icon.svg" alt="icon">
+              <img src="img/footer/icon_1.svg" alt="icon">
+          </div>
+        </div>
+        <div class="map footer__map" id="map">
+
+        </div>
+      </div>
     </div>
     <!-- /.container -->
     <div class="footer__menu">
