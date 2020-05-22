@@ -1,5 +1,7 @@
 .team
-  margin-top: 30rem
+  padding-top: 35rem
+  background-image: linear-gradient($dark 50%, transparent 50%)
+  // margin-top: 30rem
   text-align: center
   &__description
     font-size: 1.42rem
@@ -28,14 +30,16 @@
   &__textt
     flex-direction: column
     display: flex
-  &__card-text
-    position: relative
-    margin: 0 auto
-    padding: 1.79rem 2.14rem
-    background-color: $light
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-    margin-top: -6rem
-    max-width: 17rem
+  &__card
+    min-width: 0
+    &-text
+      position: relative
+      margin: 0 auto
+      padding: 1.79rem 2.14rem
+      background-color: $light
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+      margin-top: -6rem
+      max-width: 17rem
   &__pricetag
     width: 100%
     font-size: 0.92rem
@@ -48,3 +52,6 @@
   &__row
     max-width: 94%
     margin: auto
+  &__section-title
+    margin-top: -30rem
+    color: $light

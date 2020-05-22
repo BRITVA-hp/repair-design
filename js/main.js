@@ -55,9 +55,14 @@ $(document).ready(function () {
   }
   });
 
-  // Функция для плавного скролла, при нажатии на кнопку "наверх".
+  // Функция для плавного скролла, при нажатии на кнопку "наверх" и "листайте вниз".
   $('.up').on('click', function(e){
     $('html,body').stop().animate({ scrollTop: $('#hero').offset().top }, 1000);
+    e.preventDefault();
+  });
+
+  $('.hero__scroll-down').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#projects').offset().top }, 1000);
     e.preventDefault();
   });
 
@@ -233,7 +238,7 @@ $(document).ready(function () {
   });
 
   // Маска для телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7(000) 000-00-00',);
 
   // создание yandex карты
   ymaps.ready(function () {
@@ -266,6 +271,8 @@ $(document).ready(function () {
         })
     myMap.geoObjects
         .add(myPlacemark);
-});
+  });
+
+
 
 });

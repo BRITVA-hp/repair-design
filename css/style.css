@@ -351,7 +351,8 @@ body {
   font-size: 14px; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 sup {
   vertical-align: super;
@@ -418,17 +419,16 @@ sup {
   width: 100%;
   z-index: 99;
   background-color: #131313;
-  padding: 24px 0; }
+  padding: 24px 1rem 24px 0; }
+  .header__container {
+    max-width: 1295px; }
 
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .menu__contacts {
-    display: flex; }
 
 .logo {
-  margin-left: 5.7rem;
   color: #E3B873;
   text-transform: uppercase;
   font-family: 'Futura Demi';
@@ -437,25 +437,28 @@ sup {
   font-size: 1rem;
   line-height: 1.14rem; }
 
-.nav__item {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-right: 2.65rem; }
-  .nav__item:hover {
-    color: #E3B873;
-    transition: color 0.2s; }
+.nav {
+  margin-left: 1.2rem; }
+  .nav__item {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-right: 2.65rem; }
+    .nav__item:hover {
+      color: #E3B873;
+      transition: color 0.2s; }
 
 .phone {
   color: #E3B873; }
 
-.contacts__phone {
-  margin-right: 3rem;
-  font-size: 1rem; }
-
-.contacts__button {
-  margin-right: 3rem; }
+.contacts {
+  margin-right: 1rem; }
+  .contacts__phone {
+    margin-right: 3rem;
+    font-size: 1rem; }
+  .contacts__button {
+    margin-right: 2rem; }
 
 .hero {
   position: relative;
@@ -524,7 +527,7 @@ sup {
     left: 0;
     bottom: 0;
     min-width: 17.6rem;
-    min-height: 5rem;
+    min-height: 6rem;
     background-color: #131313; }
     .hero__scroll-down::after {
       content: '';
@@ -640,70 +643,81 @@ sup {
   position: relative;
   margin: auto; }
 
-.types__section-title {
-  margin-bottom: 2.1rem; }
+.types {
+  padding: 60px 1rem; }
+  .types__section-title {
+    margin-bottom: 2.1rem; }
 
-.card__text {
-  position: relative;
-  margin: 0 auto;
-  max-width: 23.6rem;
-  margin-top: -7.2rem;
-  padding: 1.79rem 2.14rem;
-  background-color: #ffffff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+.card {
+  min-width: 28rem; }
+  .card__text {
+    position: relative;
+    margin: 0 auto;
+    max-width: 23.6rem;
+    margin-top: -9.2rem;
+    padding: 1.79rem 2.14rem;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .card__title {
+    font-family: 'Yeseva One';
+    font-size: 1.29rem;
+    margin-top: 0;
+    margin-bottom: 0.55rem; }
+  .card__list {
+    padding: 0 0 0 1.1rem;
+    margin: 0;
+    font-size: 1.07rem;
+    line-height: 1.855rem;
+    color: #959595;
+    margin-bottom: 2.5rem; }
+  .card__pricetag {
+    min-width: 16.28rem;
+    position: absolute;
+    left: 0;
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #ffffff;
+    padding: 1.214rem 2.8rem; }
+  .card__name {
+    margin-top: -0.5rem;
+    margin-bottom: 0.2rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.28rem;
+    line-height: 1.78rem; }
+  .card__specialty {
+    margin-top: 0;
+    font-size: 1.28rem;
+    line-height: 1.85rem;
+    color: #959595; }
 
-.card__title {
-  font-family: 'Yeseva One';
-  font-size: 1.29rem;
-  margin-top: 0;
-  margin-bottom: 0.55rem; }
-
-.card__list {
-  padding: 0 0 0 1.1rem;
-  margin: 0;
-  font-size: 1.07rem;
-  line-height: 1.855rem;
-  color: #959595;
-  margin-bottom: 2.5rem; }
-
-.card__pricetag {
-  min-width: 16.28rem;
-  position: absolute;
-  left: 0;
-  bottom: -1.79rem;
-  font-size: 1.29rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  background-color: #E3B873;
-  color: #ffffff;
-  padding: 1.214rem 2.8rem; }
-
-.card__name {
-  margin-top: -0.5rem;
-  margin-bottom: 0.2rem;
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.28rem;
-  line-height: 1.78rem; }
-
-.card__specialty {
-  margin-top: 0;
-  font-size: 1.28rem;
-  line-height: 1.85rem;
-  color: #959595; }
-
-.design__description {
-  font-family: 'Futura Book';
-  font-size: 1.42rem;
-  line-height: 1.92rem;
-  text-align: center;
-  max-width: 52.9rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 2.78rem; }
+.design {
+  background-image: linear-gradient(transparent 50%, #131313 50%);
+  padding: 4.285rem 1rem 9rem 1rem; }
+  .design__description {
+    font-family: 'Futura Book';
+    font-size: 1.42rem;
+    line-height: 1.92rem;
+    text-align: center;
+    max-width: 52.9rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3.3rem; }
 
 .footer {
   background: #131313 url("../img/footer/footer-bg.jpg") no-repeat center/cover;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  position: relative; }
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.7); }
   .footer__wrap {
     background-color: #181818;
     max-width: 63rem;
@@ -749,6 +763,7 @@ sup {
     text-transform: uppercase;
     font-size: 1rem; }
   .footer__menu {
+    position: relative;
     background-color: #131313;
     padding: 4.285rem 0; }
   .footer__map {
@@ -770,6 +785,8 @@ sup {
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 1.7rem; }
+  .footer__container {
+    position: relative; }
 
 .modal {
   opacity: 0;
@@ -832,6 +849,9 @@ sup {
 
 .projects {
   padding-bottom: 30rem; }
+  .projects__section-title__heading {
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem; }
 
 .swiper-navigation {
   display: flex; }
@@ -911,7 +931,8 @@ sup {
   margin: 0 0.65rem; }
 
 .team {
-  margin-top: 30rem;
+  padding-top: 35rem;
+  background-image: linear-gradient(#131313 50%, transparent 50%);
   text-align: center; }
   .team__description {
     font-size: 1.42rem;
@@ -940,14 +961,16 @@ sup {
   .team__textt {
     flex-direction: column;
     display: flex; }
-  .team__card-text {
-    position: relative;
-    margin: 0 auto;
-    padding: 1.79rem 2.14rem;
-    background-color: #ffffff;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-    margin-top: -6rem;
-    max-width: 17rem; }
+  .team__card {
+    min-width: 0; }
+    .team__card-text {
+      position: relative;
+      margin: 0 auto;
+      padding: 1.79rem 2.14rem;
+      background-color: #ffffff;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+      margin-top: -6rem;
+      max-width: 17rem; }
   .team__pricetag {
     width: 100%;
     font-size: 0.92rem; }
@@ -960,6 +983,9 @@ sup {
   .team__row {
     max-width: 94%;
     margin: auto; }
+  .team__section-title {
+    margin-top: -30rem;
+    color: #ffffff; }
 
 .clients {
   padding: 0 1.2rem 33rem; }
@@ -996,6 +1022,7 @@ sup {
     display: flex;
     align-items: center; }
   .clients__card {
+    min-width: 0;
     padding: 1rem 1.6rem 4rem 1.4rem;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
     .clients__card-comment {
@@ -1024,7 +1051,7 @@ sup {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      background-color: rgba(227, 184, 115, 0.4);
+      background-color: #c88a28;
       box-shadow: none;
       cursor: pointer;
       transition: 0.3s; }
@@ -1126,11 +1153,27 @@ div.invalid {
 input.invalid {
   border-bottom: 1px solid #DD4F43; }
 
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 12px; }
+@media screen and (max-width: 1460px) {
+  .logo {
+    margin-left: 5.7rem; }
   .nav__item {
     margin-right: 1rem; } }
+
+@media screen and (max-width: 1230px) {
+  .clients__card {
+    height: 374px; } }
+
+@media screen and (max-width: 1200px) {
+  .footer__section-title__wrap {
+    max-width: 6.5rem; }
+  .design__card {
+    min-width: 0; }
+  .types__card {
+    min-width: 0; }
+  html {
+    font-size: 12px; }
+  .hero__text {
+    max-width: 36rem; } }
 
 @media screen and (max-width: 992px) {
   .swiper-container--right {
@@ -1146,13 +1189,17 @@ input.invalid {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .logo {
+    margin-left: 3.42rem; } }
 
 @media screen and (max-width: 925px) {
   .clients {
     display: none; }
   .team {
+    padding: 0;
     margin: 0;
+    margin-top: 29rem;
     background-color: #131313;
     color: #ffffff; }
     .team__card {
@@ -1177,13 +1224,16 @@ input.invalid {
     .footer__map {
       min-height: 40rem;
       max-width: 90%; }
+    .footer__input {
+      border-color: #ffffff; }
   .projects {
-    border: #131313 solid; }
+    padding-bottom: 1rem; }
   .control {
+    padding: 0;
     border: #131313 solid;
     background-color: #131313; }
     .control__section-title {
-      margin-top: 0; }
+      margin-top: 2rem; }
     .control__text {
       color: #ffffff; }
     .control__label {
@@ -1205,7 +1255,7 @@ input.invalid {
   .col-50 {
     width: 90%;
     padding: 2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 0; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -1219,6 +1269,8 @@ input.invalid {
       color: #ffffff; }
     .design__card {
       margin-bottom: 7rem; }
+  .card__name {
+    color: #131313; }
   .card__text {
     margin-left: 0; }
   .section {
@@ -1226,7 +1278,9 @@ input.invalid {
     .section-title__heading--control {
       margin-top: 0; }
     .section-title__word::after {
-      display: none; } }
+      display: none; }
+  .design {
+    padding: 1rem 0 0 0; } }
 
 @media screen and (max-width: 700px) {
   .footer__map {
@@ -1262,6 +1316,10 @@ input.invalid {
     min-width: 100%; }
   .footer__section-title {
     order: 5; }
+  .footer__title-heading {
+    padding: 0 1rem; }
+  .control__video {
+    min-height: 25rem; }
   .control__policy {
     display: flex; }
   .control__form {
@@ -1279,47 +1337,80 @@ input.invalid {
   .control__button {
     margin-bottom: -2rem;
     order: 1; }
+  .control__text {
+    max-width: 90%; }
   .section-title__heading-types {
     margin-top: 6rem; }
   .section-title__text {
     max-width: 27rem; }
   .col-50 {
     width: 90%; }
-  .logo {
-    margin-left: 3rem; }
   .title {
     font-size: 1.64em; }
   .hero::after {
     display: none; }
   .hero__text {
     font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 2.28rem;
+    max-width: 23rem; }
   .hero__content {
-    max-width: 22.86rem; }
+    width: 100%; }
   .hero__button {
+    width: 100%;
     display: block;
-    min-width: 22.86rem;
+    min-width: 0;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
-  .contacts__phone {
-    margin-right: 2rem;
-    color: #ffffff;
-    text-decoration: none; }
-  .contacts__button {
-    display: none; }
+  .hero__container {
+    width: 87%; }
+  .contacts {
+    margin-right: 0; }
+    .contacts__phone {
+      margin-right: 0;
+      color: #ffffff;
+      text-decoration: none; }
+    .contacts__button {
+      display: none; }
   .modal {
     max-width: 80%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); } }
+    transform: translate(-50%, -50%); }
+  .design__description {
+    padding: 0 1rem; }
+  .design__card {
+    min-width: 0;
+    padding: 0 1rem; }
+  .types {
+    padding: 0 1rem; }
+    .types__card {
+      min-width: 0;
+      padding: 0 1rem; }
+  .logo {
+    margin-left: 0; }
+  .header {
+    padding: 1.7rem 1.7rem; } }
+
+@media screen and (max-width: 400px) {
+  .team__description {
+    padding: 0 1rem; }
+  .team__col-icon-img {
+    left: 0; }
+  .team__card {
+    padding-left: 5rem;
+    padding-right: 0.5rem; }
+  .control__text {
+    font-size: 1rem; }
+  .control__video {
+    min-height: 14.78rem; } }
 
 @media screen and (max-width: 300px) {
   .hero__button {
     min-width: 100%;
     max-width: 100%; } }
 
-@media screen and (max-height: 530px) {
+@media screen and (max-height: 500px) {
   .hero::after {
     display: none; }
   .hero__scroll-down {
