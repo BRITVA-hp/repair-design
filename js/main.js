@@ -32,7 +32,8 @@ $(document).ready(function () {
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close'),
         up = $('.up'),
-        hero = $('.hero').height()/2;
+        hero = $('.hero').height()/2,
+        modalS = $('.modal-success');
 
   // При клике на любую кнопку появляется модальное окно.
   modalBtn.on('click', function (){
@@ -42,6 +43,25 @@ $(document).ready(function () {
   // При клике по крестику, закрывается модальное окно.
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
+  });
+
+  // При клике по крестику, закрывается модальное окно благодарности.
+  $('.modal-success__close').on('click', function () {
+    modalS.removeClass('modal-success--visible');
+  });
+
+  // Закрытие модального окна благодарности, при клике за его пределами.
+   modalS.on('click', (event) => {
+    if (modalS.is(event.target)) {
+      modalS.removeClass('modal-success--visible');
+    };
+  });
+
+  // Закрытие модального окна благодарности, при нажатии на кнопку esc.
+  $(document).on('keydown', (e) => {
+    if (e.key === "Escape" || e.keyCode === 27 ||e.code === "Escape") {
+      modalS.removeClass('modal-success--visible');
+    };
   });
 
   // При прокрутке документа, появляется кнопка "наверх" и исчезает, когда документ прокручен до верха. 
@@ -182,10 +202,25 @@ $(document).ready(function () {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
+    },
+
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $('.modal__form').serialize(),
+        success: function (response) {
+          $('.modal__form')[0].reset();
+          $('.modal-success').addClass('modal-success--visible');
+          modal.removeClass('modal--visible');
+
+        }
+      });
     }
 
   });
 
+  // Валидация формы в секции "Онлайн контроль"
   $('.control__form').validate({
     errorClass: "invalid",
     rules: {
@@ -206,10 +241,24 @@ $(document).ready(function () {
         maxlength: "Имя не должно превышать 15 символов"
       },
       controlUserPhone: "Заполните поле",
+    },
+
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send1.php",
+        data: $('.control__form').serialize(),
+        success: function (response) {
+          $('.control__form')[0].reset();
+          $('.modal-success').addClass('modal-success--visible');
+
+        }
+      });
     }
 
   });
 
+  // Валидация формы в секции "Остались вопросы (footer)"
   $('.footer__form').validate({
     errorClass: "invalid",
     rules: {
@@ -233,9 +282,24 @@ $(document).ready(function () {
       },
       footerUserPhone: "Заполните поле",
       footerUserQuestion: "Заполните поле"
-    }
+    },
 
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send2.php",
+        data: $('.footer__form').serialize(),
+        success: function (response) {
+          $('.footer__form')[0].reset();
+          $('.modal-success').addClass('modal-success--visible');
+
+        }
+      });
+    }
+    
   });
+
+  
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00',);
