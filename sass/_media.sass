@@ -4,11 +4,35 @@
   .nav
     &__item
       margin-right: 1rem
+@media screen and ( max-width: 1360px  )
+  .request
+    &__dialog
+      margin-right: 1rem
+      min-height: 0
+      min-width: 0
 @media screen and ( max-width: 1230px  )
   .clients
     &__card
       height: 374px
 @media screen and ( max-width: 1200px  )
+  .request
+    &-text--1
+      max-width: 20rem
+    &__line-img
+      max-width: 80%
+    &__box
+      &--1
+        top: 6rem
+        right: 2.5rem
+      &--2
+        top: 15rem
+        right: 7.5rem
+      &--3
+        top: 25.7rem
+        right: 2rem
+      &--4
+        top: 36rem
+        right: 2rem
   .footer
     &__section
       &-title__wrap
@@ -25,6 +49,8 @@
     &__text
       max-width: 36rem
 @media screen and ( max-width: 992px  )
+  .request
+    display: none
   .swiper
     &-container
       &--right

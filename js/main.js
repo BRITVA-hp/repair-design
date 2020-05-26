@@ -101,15 +101,15 @@ $(document).ready(function () {
   });
 
   // Слайдер
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.s1', {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.pag1',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.next1',
+      prevEl: '.prev1',
     },
   });
 
@@ -122,40 +122,32 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 20);
 
   // Слайдер с цифрами
-  // var swiper = new Swiper('.swiper-container1', {
-  //   pagination: {
-  //     el: '.swiper-pagination1',
-  //     type: 'fraction',
-  //   },
-  //   navigation: {
-  //     nextEl: '.swiper-button-next1',
-  //     prevEl: '.swiper-button-prev1',
-  //   },
-  // });
+  var swiper = new Swiper('.s2', {
+    pagination: {
+      el: '.pag2',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.next2',
+      prevEl: '.prev2',
+    },
+  });
 
-  // var total = +$('.swiper-pagination-total').text();
-  // var current = +$('.swiper-pagination-current').text() - 1;
-  // for (i=0; i<total; i++) {
-  //   $('.swiper-navigation__pagination').append('<div class="swiper-navigation__pagination--bullet">')
-  // };
+  // Переключение слайдов при нажатии на навигацию
+  var navArr = Array.from($('.aim__row-right').children());
+  var newArr = Array.from($('.wrapper2').children());
+  
+  // Активация круглишков
+  var total = +$('.swiper-pagination-total').text();
+  var current = +$('.swiper-pagination-current').text() - 1;
+  for (i=0; i<total; i++) {
+    $('.swiper-navigation__pagination').append('<div class="swiper-navigation__pagination--bullet">')
+  };
 
-  // var newArr = Array.from($('.swiper-wrapper1').children());
+  
+  
 
-  // newArr.forEach(function(item, x, arr) {
-  //   if ($(item).hasClass('swiper-slide-active')) {
-  //     var arr = Array.from($('.swiper-navigation__pagination--bullet'));
-  //     arr.forEach(function(itemo, y, arr1) {
-  //       if (x == y) {
-  //         $(itemo).addClass('swiper-navigation__pagination--bullet-active');
-  //       } else {
-  //         $(itemo).removeClass('swiper-navigation__pagination--bullet-active');
-  //       };
-  //     });
-  //   };
-  // });
-
-  // $(document).on('click', function() {
-  //   newArr.forEach(function(item, x, arr) {
+  // function paginF () { newArr.forEach(function(item, x, arr) {
   //     if ($(item).hasClass('swiper-slide-active')) {
   //       var arr = Array.from($('.swiper-navigation__pagination--bullet'));
   //       arr.forEach(function(itemo, y, arr1) {
@@ -167,8 +159,17 @@ $(document).ready(function () {
   //       });
   //     };
   //   });
-  // });
+  // }
+
+  // Позиционирование кнопок и точек
+  var next2 = $('.next2');
+  var prev2 = $('.prev2');
+  var bullets2 = $('.swiper-navigation__pagination');
   
+  // next2.css('left', prev2.width() + bulletW*totalPag.length + 20 + 20);
+  bullets2.css('left', prev2.width() + 20);
+
+  // setInterval(paginF, 100);
 
   new WOW().init();
 
@@ -303,6 +304,19 @@ $(document).ready(function () {
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00',);
+
+  // Карта появляется, когда доскролил
+  var windowHeight = $(window).height();
+  $(document).on('scroll', function() {
+		$('.footer__wrap-map').each(function() {
+			var self = $(this),
+			height = self.offset().top + self.height();
+			if ($(document).scrollTop() + windowHeight >= height) {
+				$('.footer__map').css({"display":"block"});
+			}
+		});
+  });
+  
 
   // создание yandex карты
   ymaps.ready(function () {
