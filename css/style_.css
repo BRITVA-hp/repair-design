@@ -931,6 +931,9 @@ sup {
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
+  .swiper-slide__wrap {
+    display: flex;
+    flex-direction: column; }
   .swiper-slide__img {
     min-width: 48rem; }
   .swiper-slide__text {
@@ -1112,6 +1115,8 @@ sup {
     cursor: pointer;
     max-width: 9rem;
     margin-bottom: 0; }
+    .aim__nav-card--active {
+      color: #ffffff; }
     .aim__nav-card--bottom {
       margin-top: 2rem;
       margin-bottom: 2rem; }
@@ -1124,10 +1129,10 @@ sup {
     .aim__nav-card--active {
       color: #ffffff; }
     .aim__nav-card--right {
-      margin-left: 6.3rem; }
+      margin-left: 7rem; }
 
 .aim__header {
-  margin-top: 3rem;
+  margin-top: 0;
   font-weight: normal;
   text-transform: uppercase;
   font-family: 'Yeseva One';
@@ -1164,8 +1169,9 @@ sup {
   font-size: 1.28rem;
   text-transform: uppercase;
   display: block;
-  margin-bottom: -1.5rem;
-  margin-top: 0.4rem; }
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-height: 2rem; }
   .aim__number--1 {
     max-width: 1.4rem;
     margin-bottom: 0;
@@ -1174,9 +1180,6 @@ sup {
 .aim__col-65 {
   margin-top: 5.5rem;
   margin-left: 2.2rem; }
-
-.next2 {
-  margin-left: 5.6rem; }
 
 .request {
   padding: 6rem 0; }
@@ -1289,14 +1292,14 @@ sup {
       max-width: 18.28rem; }
 
 .fantasy {
+  margin-top: 9rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 100px;
+  padding-top: 7rem;
   background: #131313 url(../img/fantasy/bg.jpg) no-repeat center/cover;
-  height: 100vh;
   color: #ffffff; }
   .fantasy::before {
     content: '';
@@ -1306,6 +1309,78 @@ sup {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .fantasy__box-img {
+    margin-left: 5rem; }
+  .fantasy__container {
+    z-index: 2; }
+  .fantasy__title {
+    text-align: left;
+    font-weight: normal; }
+    .fantasy__title-heading {
+      text-align: left;
+      width: 30rem;
+      font-size: 2rem;
+      margin-bottom: 3rem; }
+  .fantasy__img {
+    margin-bottom: 2.4rem; }
+  .fantasy__col-left {
+    -moz-text-align-last: left;
+    text-align-last: left; }
+
+.tabs {
+  display: flex; }
+  .tabs__content {
+    display: none; }
+    .tabs__content-wrap {
+      display: flex; }
+    .tabs__content-left, .tabs__content-right {
+      max-width: 39.86rem; }
+    .tabs__content-left {
+      margin-top: -10.5rem; }
+    .tabs__content-right {
+      margin-left: 1.5rem;
+      margin-top: -15.5rem; }
+  .tabs__content.active {
+    display: block; }
+  .tabs__caption {
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.8rem;
+    font-weight: 500; }
+  .tabs__caption > li {
+    cursor: pointer;
+    margin-bottom: 1.5rem; }
+
+ul > .active {
+  color: #E3B873; }
+  ul > .active::after {
+    content: '';
+    display: block;
+    width: 9rem;
+    height: 2px;
+    background-color: #E3B873; }
+
+.fantasy-swiper {
+  margin: auto;
+  max-width: 24.28rem;
+  display: none;
+  position: relative; }
+
+.p3 {
+  top: 50%;
+  left: 1rem;
+  transform: translate(0, -25%);
+  min-width: 2.57rem;
+  min-height: 4rem;
+  background: url(../img/fantasy/arrow.svg) no-repeat center; }
+
+.n3 {
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -25%);
+  min-width: 2.57rem;
+  min-height: 4rem;
+  background: url(../img/fantasy/arrow1.svg) no-repeat center; }
 
 .button {
   padding: 0.8rem 1.4rem;
@@ -1425,7 +1500,9 @@ input.invalid {
   .logo {
     margin-left: 5.7rem; }
   .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .fantasy__box-img {
+    margin-right: 2rem; } }
 
 @media screen and (max-width: 1360px) {
   .request__dialog {
@@ -1438,6 +1515,8 @@ input.invalid {
     height: 374px; } }
 
 @media screen and (max-width: 1200px) {
+  .fantasy__img-box--right {
+    margin-left: 1rem; }
   .request-text--1 {
     max-width: 20rem; }
   .request__line-img {
@@ -1486,6 +1565,12 @@ input.invalid {
     margin-left: 3.42rem; } }
 
 @media screen and (max-width: 925px) {
+  .fantasy-swiper {
+    display: block; }
+  .fantasy {
+    display: none; }
+  .aim {
+    display: none; }
   .clients {
     display: none; }
   .team {

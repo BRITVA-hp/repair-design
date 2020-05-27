@@ -1,12 +1,12 @@
 .fantasy
+  margin-top: 9rem
   position: relative
   display: flex
   flex-direction: column
   justify-content: center
   align-items: flex-start
-  padding-top: 100px
+  padding-top: 7rem
   background: $dark url(../img/fantasy/bg.jpg) no-repeat center / cover
-  height: 100vh
   color: $light
   &::before
     content: ''
@@ -16,3 +16,70 @@
     width: 100%
     height: 100%
     background-color: rgba($dark, 0.7)
+  &__box-img
+    margin-left: 5rem
+  &__container
+    z-index: 2
+  &__title
+    text-align: left
+    font-weight: normal
+    &-heading
+      text-align: left
+      width: 30rem
+      font-size: 2rem
+      margin-bottom: 3rem
+  &__img
+    margin-bottom: 2.4rem
+  &__col-left
+    text-align-last: left
+.tabs
+  display: flex
+  &__content
+    display: none
+    &-wrap
+      display: flex
+    &-left, &-right
+      max-width: 39.86rem
+    &-left
+      margin-top: -10.5rem
+    &-right
+      margin-left: 1.5rem
+      margin-top: -15.5rem
+  &__content.active 
+    display: block
+  &__caption
+    padding: 0
+    list-style-type: none
+    font-size: 1.8rem
+    font-weight: 500
+  &__caption>li
+    cursor: pointer
+    margin-bottom: 1.5rem
+ul>.active
+  color: $primary
+  &::after
+    content: ''
+    display: block
+    width: 9rem
+    height: 2px
+    background-color: $primary
+.fantasy-swiper
+  margin: auto
+  max-width: 24.28rem
+  display: none
+  position: relative
+.p3
+  top: 50%
+  left: 1rem
+  transform: translate(0, -25%)
+  min-width: 2.57rem
+  min-height: 4rem
+  background: url(../img/fantasy/arrow.svg) no-repeat center
+.n3
+  top: 50%
+  right: 1rem
+  transform: translate(0, -25%)
+  min-width: 2.57rem
+  min-height: 4rem
+  background: url(../img/fantasy/arrow1.svg) no-repeat center
+

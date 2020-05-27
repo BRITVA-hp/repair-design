@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href=css/style_.css>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<2b8ad6e1-7f6f-471f-b50d-fda01b4065b7>&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=2b8ad6e1-7f6f-471f-b50d-fda01b4065b7&lang=ru_RU" >
   </script>
   <title>Document</title>
 </head>
@@ -382,17 +382,17 @@
                   <form action="#" method="POST" class="form request__form">
                     <div class="input-group request__input-group">
                       <label for="request__user-name" class="label form__label label--light">Имя</label>
-                      <input type="text" name="userName" class="input form__inpute request__input input--light" id="request__user-name" placeholder="Как вас зовут:">
+                      <input type="text" name="requestUserName" class="input form__inpute request__input input--light" id="request__user-name" placeholder="Как вас зовут:">
           
                     </div>
                     <div class="input-group request__input-group">
                       <label for="request__user-phone" class="label form__label label--light">Телефон</label>
-                      <input type="tel" name="userPhone" class="input form__inpute request__input input--light" id="request__user-phone" placeholder="Ваш телефон:">
+                      <input type="tel" name="requestUserPhone" class="input form__inpute request__input input--light" id="request__user-phone" placeholder="Ваш телефон:">
           
                     </div>
                     <div class="input-group request__input-group request__input-group--last">
                       <label for="request__user-email" class="label form__label label--light">Email</label>
-                      <input type="email" name="userEmail" class="input form__inpute request__input input--light" id="request__user-email" placeholder="Ваш email">
+                      <input type="email" name="requestUserEmail" class="input form__inpute request__input input--light" id="request__user-email" placeholder="Ваш email">
           
                     </div>
                     <div class="policy request__policy">
@@ -408,7 +408,6 @@
                 <p class="request__economy-text">Это поможет сэкономить 10 - 20% от стоимости материалов
               </div>
             </div>
-            </p>
           </div>
           <!-- /.col-50 -->
         </div>
@@ -417,26 +416,237 @@
     </section>
     <!-- /.section request -->
 
-    <sevtion class="section fantasy">
-      <div class="container">
+    <section class="section fantasy-swiper">
+      <div class="swiper-container s3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next n3"></div>
+        <div class="swiper-button-prev p3"></div>
+      </div>
+    </section>
+    <!-- /.section fantasy-swiper -->
+
+    <section class="section fantasy">
+      <div class="container fantasy__container">
         <div class="row">
-          <div class="col-30">
-
-          </div>
-          <!-- /.col-30 -->
-          <div class="col-30">
-
-          </div>
-          <!-- /.col-30 -->
-          <div class="col-30">
-
-          </div>
-          <!-- /.col-30 -->
+            
+            <div class="tabs">
+              <div class="fantasy__col-left">
+                <div class="section-title fantasy__section-title wow animate__animated animate__fadeInUp">
+                  <h3 class="section-title__heading section-title__heading--primary fantasy__title-heading">Мы реализуем ваши самые смелые фантазии</h3>
+                </div>
+                <ul class="tabs__caption">
+                  <li class="active"><span class="fantasy__text">Американская классика</span></li>
+                  <li><span class="fantasy__text">Имперский стиль</span></li>
+                  <li><span class="fantasy__text">Классика</span></li>
+                  <li><span class="fantasy__text">Лофт</span></li>
+                  <li><span class="fantasy__text">Минимализм</span></li>
+                  <li><span class="fantasy__text">Прованс</span></li>
+                  <li><span class="fantasy__text">Романтизм</span></li>
+                  <li><span class="fantasy__text">Скандинавский стиль</span></li>
+                  <li><span class="fantasy__text">Средиземноморский стиль</span></li>
+                  <li><span class="fantasy__text">Хайтек</span></li>
+                  <li><span class="fantasy__text">Эклектизм</span></li>
+                </ul>
+              </div>
+              
+              <div class="fantasy__box-img">
+                <div class="tabs__content active">
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                  <!-- /.tabs__content-right -->
+                </div>
+                
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/impair/img.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/impair/img1.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__contemt-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/impair/img2.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/impair/img3.jpg" alt="image" class="fantasy__img">
+                    </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/classic/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/classic/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/classic/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/classic/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.rabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/loft/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/loft/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                    <img src="img/fantasy/loft/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/loft/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/minimal/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/minimal/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/minimal/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/minimal/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/provance/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/provance/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/provance/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/provance/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/romantism/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/romantism/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/romantism/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/romantism/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/viking/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/viking/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/viking/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/viking/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                    <img src="img/fantasy/sea/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/sea/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/sea/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/sea/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/heightec/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/heightec/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                  <img src="img/fantasy/heightec/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/heightec/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                  <div class="tabs__content-left">
+                  <img src="img/fantasy/eclec/img.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/eclec/img1.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-left -->
+                  <div class="tabs__content-right">
+                    <img src="img/fantasy/eclec/img2.jpg" alt="image" class="fantasy__img">
+                  <img src="img/fantasy/eclec/img3.jpg" alt="image" class="fantasy__img">
+                  </div>
+                  <!-- /.tabs__content-right -->
+                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+              </div>
+              
+            </div><!-- .tabs-->
+ 
+            
         </div>
         <!-- /.row -->
       </div>
       <!-- /.container -->
-    </sevtion>
+    </section>
     <!-- /.section fantasy -->
 
 
@@ -566,57 +776,69 @@
             <div class="section-title section-title--left">
               <span class="section-title__work aim__section-title__work">как мы работаем</span> <!-- /.section-title__work -->
               <h2 class="section-title__heading section-title__heading--primary aim__section-title__heading">6 шагов <span class="section-title__words">до цели</span> </h2>
-              <!-- /.section-title__heading section-title__heading--primary -->
                 
             </div>
-            <span class="aim__number">1/6</span>
+            
             <div class="swiper-container s2">
               
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper wrapper2">
+              <div class="swiper-wrapper wrapper2 swiper-no-swiping">
                   <!-- Slides -->
                   <div class="swiper-slide">
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">1/6</span>
                     <h3 class="aim__header">Выезд на замеры помещения</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
                     <!-- /.swiper-slide__text -->
                   </div>
                   <div class="swiper-slide">
-                    <h3 class="aim__header">Выезд на замеры помещения</h3>
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">2/6</span>
+                    <h3 class="aim__header">Составление сметы</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                    <!-- /.swiper-slide__text -->
+                    </div>
                   </div>
     
                   <div class="swiper-slide">
-                    <h3 class="aim__header">Выезд на замеры помещения</h3>
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">3/6</span>
+                    <h3 class="aim__header">Разработка дизайн проекта</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                    <!-- /.swiper-slide__text -->
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <h3 class="aim__header">Выезд на замеры помещения</h3>
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">4/6</span>
+                    <h3 class="aim__header">Закупка расходных материалов</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                    <!-- /.swiper-slide__text -->
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <h3 class="aim__header">Выезд на замеры помещения</h3>
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">5/6</span>
+                    <h3 class="aim__header">Ремонтно-отделочные работы</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                    <!-- /.swiper-slide__text -->
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <h3 class="aim__header">Выезд на замеры помещения</h3>
+                    <div class="swiper-slide__wrap">
+                      <span class="aim__number">6/6</span>
+                    <h3 class="aim__header">Приемка-сдача работ</h3>
                     <p class="aim__text aim__text--1">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.
                       </p>
                       <p class="aim__text aim__text--2">Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
-                    <!-- /.swiper-slide__text -->
+                    </div>
                   </div>
                   
               </div>
@@ -625,7 +847,6 @@
               <!-- If we need navigation buttons -->
               <div class="swiper-button-prev prev2"></div>
               <div class="swiper-pagination pag2"></div>
-              <!-- <div class="swiper-navigation__pagination"></div> -->
               <div class="swiper-button-next next2"></div>
     
             </div>
@@ -682,7 +903,7 @@
             <!-- Slider main container -->
             <div class="swiper-container s2">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <img src="img/aim/image.jpg" alt="">

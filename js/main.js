@@ -114,9 +114,9 @@ $(document).ready(function () {
   });
 
   // Позиционирование кнопок и точек
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+  var next = $('.next1');
+  var prev = $('.prev1');
+  var bullets = $('.pag1');
 
   next.css('left', prev.width() + bullets.width() + 20 + 20);
   bullets.css('left', prev.width() + 20);
@@ -164,9 +164,37 @@ $(document).ready(function () {
   // Позиционирование кнопок и точек
   var next2 = $('.next2');
   var prev2 = $('.prev2');
-  var bullets2 = $('.swiper-navigation__pagination');
+  var bullets2 = $('.pag2');
+  // Функция для активного меню в секции "6 шагов до цели"
+  var arr = Array.from($('.pag2').children());
+  arr.forEach(function(item, x, arr) {
+    if ($(item).hasClass('swiper-pagination-bullet-active')) {
+      var arrNew = Array.from($('.aim__row-right').children());
+      arrNew.forEach(function(item1, y, arr1) {
+        if (x == y) {
+          $(item1).children().addClass('aim__nav-card--active');
+        } else {
+          $(item1).children().removeClass('aim__nav-card--active');
+        }
+      })
+    }
+  })
+  $('.aim').on('click', function () {
+    arr.forEach(function(item, x, arr) {
+      if ($(item).hasClass('swiper-pagination-bullet-active')) {
+        var arrNew = Array.from($('.aim__row-right').children());
+        arrNew.forEach(function(item1, y, arr1) {
+          if (x == y) {
+            $(item1).children().addClass('aim__nav-card--active');
+          } else {
+            $(item1).children().removeClass('aim__nav-card--active');
+          }
+        })
+      }
+    })
+  });
   
-  // next2.css('left', prev2.width() + bulletW*totalPag.length + 20 + 20);
+  next2.css('left', prev2.width() + bullets2.width() + 20 + 20);
   bullets2.css('left', prev2.width() + 20);
 
   // setInterval(paginF, 100);
@@ -300,8 +328,54 @@ $(document).ready(function () {
     
   });
 
-  
+   // Валидация формы в "трудной" секции
 
+   $('.request__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // Строчное правило
+      requestUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      requestUserPhone: "required",
+      // Правило-объект (блок)
+      requestUserEmail: {
+        required: true,
+        email: true
+      }
+      
+    },  
+    errorElement: "div",
+    // Сообщения
+    messages: {
+      requestUserName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не должно превышать 15 символов"
+      },
+      requestUserPhone: "Заполните поле",
+      requestUserEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    },
+
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send3.php",
+        data: $('.request__form').serialize(),
+        success: function (response) {
+          $('.request__form')[0].reset();
+          $('.modal-success').addClass('modal-success--visible');
+
+        }
+      });
+    }
+    
+  });
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00',);
 
@@ -351,6 +425,24 @@ $(document).ready(function () {
         .add(myPlacemark);
   });
 
+  (function($) {
+    $(function() {
+      
+      $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+      });
+      
+    });
+    })(jQuery);
 
+  // Активация слайдера в секции fantasy
+  var swiper = new Swiper('.s3', {
+    navigation: {
+      nextEl: '.n3',
+      prevEl: '.p3',
+    },
+  });
 
 });
