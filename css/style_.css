@@ -610,13 +610,16 @@ sup {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 55rem;
-  margin: auto; }
+  min-height: 8.29rem;
+  margin: auto;
+  align-content: space-between; }
 
 .control__input {
   color: #131313; }
   .control__input:focus {
     outline: none; }
   .control__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 30%; }
@@ -790,6 +793,13 @@ sup {
   .footer__container {
     position: relative; }
 
+.map-tel {
+  text-decoration: none;
+  color: #E3B873; }
+
+.google-map {
+  height: 470px; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -837,6 +847,7 @@ sup {
   .modal__input {
     color: #ffffff; }
     .modal__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       margin-bottom: 3.428rem; }
@@ -845,6 +856,7 @@ sup {
     .modal__input:focus {
       outline: none; }
   .modal__policy {
+    position: relative;
     color: #ffffff;
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -1545,6 +1557,10 @@ input.invalid {
     max-width: 36rem; } }
 
 @media screen and (max-width: 992px) {
+  .button--primary:hover {
+    background-color: #E3B873; }
+  .button--outline:hover {
+    background-color: transparent; }
   .request {
     display: none; }
   .swiper-container--right {
@@ -1677,6 +1693,8 @@ input.invalid {
     font-size: 14px; } }
 
 @media screen and (max-width: 570px) {
+  .google-map {
+    height: 100%; }
   .footer__wrap-map {
     display: flex;
     flex-direction: column; }

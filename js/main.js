@@ -85,6 +85,31 @@ $(document).ready(function () {
     $('html,body').stop().animate({ scrollTop: $('#projects').offset().top }, 1000);
     e.preventDefault();
   });
+// Функция для плавного скролла, при нажатии на ссылку в навигации.
+  $('.nav__item1').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#hero').offset().top }, 1000);
+    e.preventDefault();
+  });
+  $('.nav__item2').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#projects').offset().top }, 1000);
+    e.preventDefault();
+  });
+  $('.nav__item3').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#aim').offset().top }, 1000);
+    e.preventDefault();
+  });
+  $('.nav__item4').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#team').offset().top }, 1000);
+    e.preventDefault();
+  });
+  $('.nav__item5').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#clients').offset().top }, 1000);
+    e.preventDefault();
+  });
+  $('.nav__item6').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#contacts').offset().top }, 1000);
+    e.preventDefault();
+  });
 
   // Закрытие модального окна, при клике за его пределами.
   modal.on('click', (event) => {
@@ -136,16 +161,6 @@ $(document).ready(function () {
   // Переключение слайдов при нажатии на навигацию
   var navArr = Array.from($('.aim__row-right').children());
   var newArr = Array.from($('.wrapper2').children());
-  
-  // Активация круглишков
-  var total = +$('.swiper-pagination-total').text();
-  var current = +$('.swiper-pagination-current').text() - 1;
-  for (i=0; i<total; i++) {
-    $('.swiper-navigation__pagination').append('<div class="swiper-navigation__pagination--bullet">')
-  };
-
-  
-  
 
   // function paginF () { newArr.forEach(function(item, x, arr) {
   //     if ($(item).hasClass('swiper-slide-active')) {
@@ -211,6 +226,7 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
+      policyCheckbox: "required",
       userPhone: "required",
       // Правило-объект (блок)
       userEmail: {
@@ -226,6 +242,7 @@ $(document).ready(function () {
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не должно превышать 15 символов"
       },
+      policyCheckbox: "Вам нужно согласиться с обработкой данных",
       userPhone: "Заполните поле",
       userEmail: {
         required: "Заполните поле",
@@ -260,11 +277,13 @@ $(document).ready(function () {
         maxlength: 15
       },
       controlUserPhone: "required",
+      cPolicyCheckbox: "required",
     },  
     errorElement: "div",
     // Сообщения
     messages: {
       controlUserName: {
+        cPolicyCheckbox: "Вам нужно согласиться с обработкой данных",
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не должно превышать 15 символов"
@@ -298,12 +317,14 @@ $(document).ready(function () {
         maxlength: 15
       },
       footerUserPhone: "required",
+      fPolicyCheckbox: "required",
       // Правило-объект (блок)
       footerUserQuestion: "required"
     },  
     errorElement: "div",
     // Сообщения
     messages: {
+      fPolicyCheckbox: "Вам нужно согласиться с обработкой данных",
       footerUserName: {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
@@ -340,6 +361,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       requestUserPhone: "required",
+      rPolicyCheckbox: "required",
       // Правило-объект (блок)
       requestUserEmail: {
         required: true,
@@ -356,6 +378,7 @@ $(document).ready(function () {
         maxlength: "Имя не должно превышать 15 символов"
       },
       requestUserPhone: "Заполните поле",
+      rPolicyCheckbox: "Вам нужно согласиться с обработкой данных",
       requestUserEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
@@ -390,40 +413,8 @@ $(document).ready(function () {
 			}
 		});
   });
-  
 
-  // создание yandex карты
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/location.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        })
-    myMap.geoObjects
-        .add(myPlacemark);
-  });
+  //Слайдер в секции fantasy на мобильной версии
 
   (function($) {
     $(function() {
