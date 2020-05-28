@@ -218,6 +218,7 @@ $(document).ready(function () {
 
   // Валидация формы
   $('.modal__form').validate({
+    errorPlacement:function(e,t){"policyCheckbox"==t.attr("name")?e.insertAfter(t.next()):e.insertAfter(t)},
     errorClass: "invalid",
     rules: {
       // Строчное правило
@@ -259,7 +260,7 @@ $(document).ready(function () {
           $('.modal__form')[0].reset();
           $('.modal-success').addClass('modal-success--visible');
           modal.removeClass('modal--visible');
-
+          ym(64433473,'reachGoal','form'); return true;
         }
       });
     }
@@ -268,6 +269,7 @@ $(document).ready(function () {
 
   // Валидация формы в секции "Онлайн контроль"
   $('.control__form').validate({
+    errorPlacement:function(e,t){"cPolicyCheckbox"==t.attr("name")?e.insertAfter(t.next()):e.insertAfter(t)},
     errorClass: "invalid",
     rules: {
       // Строчное правило
@@ -277,18 +279,18 @@ $(document).ready(function () {
         maxlength: 15
       },
       controlUserPhone: "required",
-      cPolicyCheckbox: "required",
+      cPolicyCheckbox: {required:!0},
     },  
     errorElement: "div",
     // Сообщения
     messages: {
       controlUserName: {
-        cPolicyCheckbox: "Вам нужно согласиться с обработкой данных",
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не должно превышать 15 символов"
       },
       controlUserPhone: "Заполните поле",
+      cPolicyCheckbox: "Вам нужно согласиться с обработкой данных",
     },
 
     submitHandler: function(form) {
@@ -308,6 +310,7 @@ $(document).ready(function () {
 
   // Валидация формы в секции "Остались вопросы (footer)"
   $('.footer__form').validate({
+    errorPlacement:function(e,t){"fPolicyCheckbox"==t.attr("name")?e.insertAfter(t.next()):e.insertAfter(t)},
     errorClass: "invalid",
     rules: {
       // Строчное правило
@@ -352,6 +355,7 @@ $(document).ready(function () {
    // Валидация формы в "трудной" секции
 
    $('.request__form').validate({
+    errorPlacement:function(e,t){"rPolicyCheckbox"==t.attr("name")?e.insertAfter(t.next()):e.insertAfter(t)},
     errorClass: "invalid",
     rules: {
       // Строчное правило
@@ -436,4 +440,20 @@ $(document).ready(function () {
     },
   });
 
+  // Видео с Ютуба
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '460',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+
+  function videoPlay (event) {
+    event.target.playVideo();
+  }
 });

@@ -146,6 +146,8 @@
         color: $light
     &__policy-label
       color: $light
+    &__form
+      padding: 3rem 0
   .col-50
     width: 90%
     padding: 2rem
@@ -154,6 +156,7 @@
     flex-direction: column
     align-items: center
   .types
+    margin-top: 2rem
     &__card
       margin-bottom: 7rem
   .design
@@ -227,6 +230,8 @@
     &__video
       min-height: 25rem
     &__policy
+      margin-top: 5rem
+      margin-left: 0.8rem
       display: flex
     &__form
       max-width: 80%
@@ -240,11 +245,19 @@
       margin-top: -4rem
     &__input
       margin-bottom: 4rem
+      &-group>div.invalid
+        bottom: 28px
     &__button
       margin-bottom: -2rem
       order: 1
     &__text
       max-width: 90%
+    &__form
+      display: block
+    &__button
+      width: 100%
+      position: absolute
+      bottom: 0
   .section
     &-title
       &__heading-types

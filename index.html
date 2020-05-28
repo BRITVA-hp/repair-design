@@ -11,7 +11,7 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64433473, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64433473" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64433473, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64433473" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container header__container">
       <div class="menu">
@@ -26,7 +26,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+          <button onclick="ym('64433473', 'reachGoal', 'button'); return true;" class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
         </div>
         <!-- /.contacts -->
       </div>
@@ -193,7 +193,8 @@
           <!-- /.section-title__img -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
+        <div class="control__video video" id="player"> 
+          <script src="https://www.youtube.com/iframe_api"></script>
           <img src="img/play-icon.svg" alt="play icon" class="video__play">
         </div>
         <!-- /.control__video video -->
@@ -212,7 +213,7 @@
           </div>
           <!-- /.conrol__input-group -->
             <button class="button--primary control__button">Отправить</button>
-          <div class="policy control__policy">
+          <div class="policy control__policy control__input-group">
             <input type="checkbox" name="cPolicyCheckbox" id="control__policy-checkbox" class="policy__checkbox" checked>
             <label for="control__policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
@@ -480,13 +481,13 @@
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
                     <div class="tabs__content-left">
-                      <img src="img/fantasy/impair/img.jpg" alt="image" class="fantasy__img">
-                      <img src="img/fantasy/impair/img1.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img5.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img6.jpg" alt="image" class="fantasy__img">
                     </div>
                     <!-- /.tabs__contemt-left -->
                     <div class="tabs__content-right">
-                      <img src="img/fantasy/impair/img2.jpg" alt="image" class="fantasy__img">
-                      <img src="img/fantasy/impair/img3.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img7.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img8.jpg" alt="image" class="fantasy__img">
                     </div>
                   <!-- /.tabs__content-right -->
                   </div>
@@ -495,31 +496,30 @@
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/classic/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/classic/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/classic/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/classic/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-right -->
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
                   </div>
                   <!-- /.rabs__content-wrap -->
                 </div>
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/loft/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/loft/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                    <img src="img/fantasy/loft/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/loft/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img5.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img6.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__contemt-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img7.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img8.jpg" alt="image" class="fantasy__img">
+                    </div>
                   <!-- /.tabs__content-right -->
                   </div>
                   <!-- /.tabs__content-wrap -->
@@ -527,15 +527,30 @@
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/minimal/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/minimal/img1.jpg" alt="image" class="fantasy__img">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
                   </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/minimal/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/minimal/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img5.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img6.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__contemt-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img7.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img8.jpg" alt="image" class="fantasy__img">
+                    </div>
                   <!-- /.tabs__content-right -->
                   </div>
                   <!-- /.tabs__content-wrap -->
@@ -543,15 +558,30 @@
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/provance/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/provance/img1.jpg" alt="image" class="fantasy__img">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
                   </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/provance/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/provance/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img5.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img6.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__contemt-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img7.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img8.jpg" alt="image" class="fantasy__img">
+                    </div>
                   <!-- /.tabs__content-right -->
                   </div>
                   <!-- /.tabs__content-wrap -->
@@ -559,15 +589,30 @@
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/romantism/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/romantism/img1.jpg" alt="image" class="fantasy__img">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
                   </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/romantism/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/romantism/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
+                  <!-- /.tabs__content-wrap -->
+                </div>
+  
+                <div class="tabs__content">
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img5.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img6.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__contemt-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img7.jpg" alt="image" class="fantasy__img">
+                      <img src="img/fantasy/img8.jpg" alt="image" class="fantasy__img">
+                    </div>
                   <!-- /.tabs__content-right -->
                   </div>
                   <!-- /.tabs__content-wrap -->
@@ -575,64 +620,15 @@
   
                 <div class="tabs__content">
                   <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/viking/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/viking/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/viking/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/viking/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-right -->
-                  </div>
-                  <!-- /.tabs__content-wrap -->
-                </div>
-  
-                <div class="tabs__content">
-                  <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                    <img src="img/fantasy/sea/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/sea/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/sea/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/sea/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-right -->
-                  </div>
-                  <!-- /.tabs__content-wrap -->
-                </div>
-  
-                <div class="tabs__content">
-                  <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/heightec/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/heightec/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                  <img src="img/fantasy/heightec/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/heightec/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-right -->
-                  </div>
-                  <!-- /.tabs__content-wrap -->
-                </div>
-  
-                <div class="tabs__content">
-                  <div class="tabs__content-wrap">
-                  <div class="tabs__content-left">
-                  <img src="img/fantasy/eclec/img.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/eclec/img1.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-left -->
-                  <div class="tabs__content-right">
-                    <img src="img/fantasy/eclec/img2.jpg" alt="image" class="fantasy__img">
-                  <img src="img/fantasy/eclec/img3.jpg" alt="image" class="fantasy__img">
-                  </div>
-                  <!-- /.tabs__content-right -->
+                    <div class="tabs__content-left">
+                      <img src="img/fantasy/img1.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img2.jpg" alt="image" class="fantasy__img">
+                    </div>
+                    <!-- /.tabs__content-left -->
+                    <div class="tabs__content-right">
+                      <img src="img/fantasy/img3.jpg" alt="image" class="fantasy__img">
+                    <img src="img/fantasy/img4.jpg" alt="image" class="fantasy__img">
+                    </div>
                   </div>
                   <!-- /.tabs__content-wrap -->
                 </div>
@@ -768,7 +764,7 @@
       <!-- /.container -->
     </section>
 
-    <section class="section section--dark aim" id="aim"
+    <section class="section section--dark aim" id="aim">
       <div class="container">
         <div class="row">
           <div class="col-35">

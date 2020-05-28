@@ -8,6 +8,7 @@ const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
+const del = require('del');
 
 // Static server
 function bs() {
@@ -43,8 +44,13 @@ function buildCSS(done) {
 }
 
 function buildJS (done) {
-    src(['js/**.js', '!js/**.min.js'])
-        .pipe(minify())
+    src('js/**.js')
+    .pipe(minify({
+        ext:{
+            min:'-min.js',
+        },
+        ignoreFiles: ['*.min.js']
+    }))
         .pipe(dest('dist/js/'));
     src('js/**.min.js').pipe(dest('dist/js/'));
     done();
@@ -79,7 +85,6 @@ function imagemin (done) {
         .pipe(dest('dist/img/'))
     done();
 }
-
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, html, php, fonts);
+exports.build = series(buildCSS, buildJS, php,  html, fonts, imagemin);
 exports.buildjs = buildJS;
