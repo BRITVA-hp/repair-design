@@ -86,5 +86,5 @@ function imagemin (done) {
     done();
 }
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, php,  html, fonts, imagemin);
+exports.build = series(buildCSS, buildJS, php,  html, fonts);
 exports.buildjs = buildJS;

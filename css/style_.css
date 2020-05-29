@@ -659,6 +659,7 @@ div.invalid {
   cursor: pointer; }
 
 .types {
+  overflow: hidden;
   padding: 60px 1rem; }
   .types__section-title {
     margin-bottom: 2.1rem; }
@@ -709,6 +710,7 @@ div.invalid {
     color: #959595; }
 
 .design {
+  overflow: hidden;
   background-image: linear-gradient(transparent 50%, #131313 50%);
   padding: 4.285rem 1rem 9rem 1rem; }
   .design__description {
@@ -811,7 +813,8 @@ div.invalid {
   color: #E3B873; }
 
 .google-map {
-  height: 470px; }
+  height: 470px;
+  width: 100%; }
 
 .modal {
   opacity: 0;
@@ -1016,6 +1019,7 @@ div.invalid {
   margin: 0 0.65rem; }
 
 .team {
+  overflow: hidden;
   margin-top: -1rem;
   padding-top: 35rem;
   background-image: linear-gradient(#131313 50%, transparent 50%);
@@ -1074,6 +1078,7 @@ div.invalid {
     color: #ffffff; }
 
 .clients {
+  overflow: hidden;
   padding: 0 1.2rem 33rem; }
   .clients__description {
     margin: auto;
