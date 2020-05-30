@@ -151,12 +151,17 @@ $(document).ready(function () {
     pagination: {
       el: '.pag2',
       type: 'bullets',
+      lickable: true
     },
     navigation: {
       nextEl: '.next2',
       prevEl: '.prev2',
     },
   });
+  $('.aim__row-right').on('click',  '.aim__nav', function() {
+    const index = $(this).data('index');
+    swiper.slideTo(index);
+ });
 
   // Переключение слайдов при нажатии на навигацию
   var navArr = Array.from($('.aim__row-right').children());

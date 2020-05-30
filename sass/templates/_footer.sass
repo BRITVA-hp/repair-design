@@ -11,7 +11,8 @@
     height: 100%
     background-color: rgba($dark, 0.7)
   &__wrap
-    background-color: $black
+    background: $dark url(../img/bg-lines.svg) no-repeat center
+    background-size: cover
     max-width: 63rem
     margin: auto
     margin-top: -20rem
@@ -83,8 +84,14 @@
   &__container
     position: relative
 .map-tel
+  display: inline-block
   text-decoration: none
   color: $primary
+  &:hover
+      color: scale-color($primary,$lightness:-30%)
+      box-shadow: none
+      cursor: pointer
+      transition: 0.3s
 .google-map
   height: 470px
   width: 100%

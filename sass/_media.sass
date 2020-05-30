@@ -55,6 +55,11 @@
   .hero
     &__text
       max-width: 36rem
+@media screen and ( max-width: 1060px  )
+  .fantasy
+    display: none
+  .fantasy-swiper
+    display: block
 @media screen and ( max-width: 992px  )
   .button
     &--primary
@@ -87,22 +92,19 @@
   .logo
     margin-left: 3.42rem
 @media screen and ( max-width: 925px  )
-  .s3
-    // padding: 3rem
-  .fantasy-swiper
-    display: block
-  .fantasy
-    display: none
+  .fantasy-min
+    background-image: linear-gradient(transparent 50%, $dark 50%)
+    margin-bottom: -1rem
   .aim
     display: none
   .clients
     display: none
   .team
     padding: 0
-    margin: 0
-    margin-top: 29rem
     background-color: $dark
     color: $light
+    &__section-title
+      margin-top: 1rem
     &__card
       margin-bottom: 10rem
       &--bottom
@@ -116,7 +118,7 @@
       margin-top: 0
     &__col-icon
       &-img
-        left: -4rem
+        left: -5rem
   .footer
     background: $dark
     &__wrap
@@ -187,10 +189,10 @@
   .footer
     &__map
       min-height: 0
-      max-height: 18.2rem
   .control
     &__form
-      max-width: 90%
+      padding-left: 1rem
+      padding-right: 1rem
     &__video
       background-size: cover
       max-width: 90%
@@ -204,9 +206,26 @@
       &__text
         font-size: 14px
 @media screen and ( max-width: 570px  )
+  .fantasy
+    &__heading
+      font-size: 1.95rem
+  .team
+    &__card
+      min-width: 90%
+    &__title
+      &-heading
+        font-size: 1.9rem
   .google-map
-    height: 100%
+    height: 22rem
+    width: 100%
   .footer
+    &__wrap
+      padding: 0.2rem
+      margin-bottom: 1.5rem
+      width: 100%
+    &__map
+      margin-bottom: 2rem
+      width: 90%
     &__wrap-map
       display: flex
       flex-direction: column
@@ -214,18 +233,31 @@
       display: none
     &__input
       &-group
+        margin-bottom: 5.5rem
         flex-basis: 90%
+        &__bottom
+          margin-bottom: 2rem
     &__policy
       display: flex
       align-items: flex-start
       &-label
         margin-left: -1rem
     &__button
+      font-size: 1.35rem
       min-width: 100%
     &__section-title
       order: 5
-    &__title-heading
-      padding: 0 1rem
+      &__wrap
+        max-width: 8rem
+    &__title
+      margin-bottom: 4.5rem
+      font-size: 1.7rem
+      &-heading
+        font-size: 1.6rem
+        max-width: 29rem
+        padding: 0 1rem
+    &-icon
+      width: 3.5rem
   .control
     &__video
       min-height: 25rem
@@ -238,20 +270,35 @@
       flex-direction: column
     &__label
       margin-bottom: 0.01rem
-    &__policy-label
-      align-self: flex-start
-      margin-left: -1rem
-      margin-bottom: 4rem
-      margin-top: -4rem
+    &__policy
+      margin-top: 6rem
+      margin-left: 0
+      &>div.invalid
+        bottom: 20px
+      &-label
+        font-size: 1.4rem
+        align-self: flex-start
+        margin-left: -1rem
+        margin-bottom: 4rem
+        margin-top: -4rem
     &__input
-      margin-bottom: 4rem
+      font-size: 1.5rem
+      margin-bottom: 5rem
+      &--right
+        margin-bottom: 0
+        bottom: -5px
       &-group>div.invalid
-        bottom: 28px
+        top: 45px
     &__button
+      font-weight: 500
+      font-size: 1.3rem
       margin-bottom: -2rem
       order: 1
     &__text
-      max-width: 90%
+      margin-bottom: 0
+      font-size: 1.2rem
+      max-width: 84%
+      line-height: 2rem
     &__form
       display: block
     &__button
@@ -260,8 +307,12 @@
       bottom: 0
   .section
     &-title
-      &__heading-types
-        margin-top: 6rem
+      &__heading
+        &--control
+          font-size: 1.95rem
+        &-types
+          font-size: 2rem
+          margin-top: 6rem
       &__text
         max-width: 27rem
   .col-50
@@ -278,6 +329,7 @@
     &__content
       width: 100%
     &__button
+      font-size: 1.1rem
       width: 100%
       display: block
       min-width: 0
@@ -300,6 +352,8 @@
     top: 50%
     transform: translate(-50%, -50%)
   .design
+    &__heading
+      font-size: 1.94rem
     &__description
       padding: 0 1rem
     &__card
@@ -341,3 +395,12 @@
       display: none
     &__scroll-down
       display: none
+@media screen and ( max-height: 450px  )
+  .modal
+    overflow: auto
+@media screen and ( max-height: 370px  )
+  .hero
+    &__button
+      padding: 0.8rem 2rem
+    &__text
+      margin-bottom: 0.5rem

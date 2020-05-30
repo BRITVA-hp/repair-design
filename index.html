@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href=css/style_.css>
-  <title>Document</title>
+  <title>Турецкий ремонт</title>
 </head>
 <body>
   <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64433473, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64433473" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container header__container">
       <div class="menu">
-        <div class="logo menu__logo wow animate__animated animate__flipInX">Repair Design Project</div>
+        <div class="logo menu__logo wow animate__animated animate__flipInX"><a href="index.html" class="repair__design">Repair Design Project</a></div>
         <nav class="nav menu__nav">
           <a href="#hero" class="nav__item nav__item1">Главная</a>
           <a href="#projects" class="nav__item nav__item2">Проекты</a>
@@ -209,11 +209,11 @@
           <!-- /.conrol__input-group -->
           <div class="control__input-group">
             <label for="control__user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" name="controlUserPhone" class="input form__inpute control__input" id="control__user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="controlUserPhone" class="input form__inpute control__input control__input--right" id="control__user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.conrol__input-group -->
             <button class="button--primary control__button">Отправить</button>
-          <div class="policy control__policy control__input-group">
+          <div class="policy control__policy">
             <input type="checkbox" name="cPolicyCheckbox" id="control__policy-checkbox" class="policy__checkbox" checked>
             <label for="control__policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
@@ -416,23 +416,28 @@
     </section>
     <!-- /.section request -->
 
-    <div class="section fantasy-swiper">
-      <div class="swiper-container s3">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
-          <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+    <div class="fantasy-min">
+      <div class="section-title fantasy__section-title section-title--light wow animate__animated animate__fadeInUp">
+        <h3 class="section-title__heading section-title__heading--primary fantasy__heading">Мы реализуем ваши самые смелые фантазии</h3>
+      </div>
+      <div class="section fantasy-swiper">
+        <div class="swiper-container s3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+            <div class="swiper-slide"><img src="img/fantasy/bg.jpg" alt="image" class="fantasy__img"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next n3"></div>
+          <div class="swiper-button-prev p3"></div>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next n3"></div>
-        <div class="swiper-button-prev p3"></div>
       </div>
     </div>
     <!-- /.section fantasy-swiper -->
@@ -648,7 +653,7 @@
     <section class="section design">
       <div class="container">
         <div class="section-title design__section-title wow animate__animated animate__fadeInUp">
-          <h2 class="section-title__heading">Дизайн проект</h2>
+          <h2 class="section-title__heading design__heading">Дизайн проект</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/design.svg" alt="repair">
@@ -945,7 +950,7 @@
             <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
               <img src="img/team/icon.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card">
-                <img src="img/team/photo.png" alt="photo">
+                  <img src="img/team/photo.png" alt="photo" class="team__caed-img">
                 <div class="team__card-text">
                   <h2 class="card__name">Алексей Колмаков</h2>
                   <p class="card__specialty">Проектный менеджер</p>
@@ -961,7 +966,7 @@
             <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
               <img src="img/team/icon_1.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card">
-                <img src="img/team/photo_1.png" alt="photo">
+                  <img src="img/team/photo_1.png" alt="photo" class="team__card-img">
                 <div class="team__card-text">
                   <h2 class="card__name">Алиса Сухорукова</h2>
                   <p class="card__specialty">Дизайнер</p>
@@ -977,7 +982,7 @@
             <div class="col-30 wow animate__animated animate__fadeInRight" data-wow-delay="0.8s">
               <img src="img/team/icon_2.svg" alt="icon" class="team__col-icon-img">
               <div class="card team__card team__card--bottom">
-                <img src="img/team/photo_2.png" alt="photo">
+                  <img src="img/team/photo_2.png" alt="photo" class="team__card-img">
                 <div class="team__card-text">
                   <h2 class="card__name">Давид Волынев</h2>
                   <p class="card__specialty">Бригадир</p>
@@ -1126,7 +1131,7 @@
           </div>
           <!-- /.input-group footer__input-group -->
 
-          <div class="input-group footer__input-group footer__input-group--full-width">
+          <div class="input-group footer__input-group footer__input-group--full-width footer__input-group__bottom">
 
             <label for="footer__user-question" class="label form__label label--light">Вопрос</label>
           <input name="footerUserQuestion" type="text" class="input form__inpute footer__input input--light" id="footer__user-question" placeholder="Я хочу спросить:">
@@ -1148,8 +1153,8 @@
             Прямой телефон <a href="tel:+79997683299" class="map-tel">+7 (999) 768 32 99</a></h3>
           <!-- /.section-title__heading -->
           <div class="footer__section-title__wrap">
-              <img src="img/footer/icon.svg" alt="icon">
-              <img src="img/footer/icon_1.svg" alt="icon">
+              <a href="mailto:borbritvahp@gmail.com"><img src="img/footer/icon.svg" alt="icon" class="footer-icon"></a>
+              <a href="https://www.instagram.com/britva_hp/"><img src="img/footer/icon_1.svg" alt="icon" class="footer-icon"></a>
           </div>
         </div>
         <div class="map footer__map" id="map">
